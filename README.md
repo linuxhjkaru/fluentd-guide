@@ -95,7 +95,7 @@ Hướng dẫn về Fluentd trong Ruby
   
     Include chủ yếu được sử dụng cho trường hợp muốn include các file config khác. Còn System được sử dụng để       thiết lập cho các config hệ thống. Phần này các bạn có thể xem trên doc của Fluentd.
     
-  Với một file fluend.conf thì chỉ cần 2 phần là source và match bình thường là có thể chạy được phần xử lý log
+    Với một file fluend.conf thì chỉ cần 2 phần là source và match bình thường là có thể chạy được phần xử lý log
   
   4. Một vài ví dụ về Fluend
 
@@ -157,7 +157,7 @@ Hướng dẫn về Fluentd trong Ruby
   </match>
   ```
   
-  Phần này không có gì để nói nhiều :))
+    Phần này không có gì để nói nhiều :))
   
   5. Fluentd trong Ruby on Rails
   
