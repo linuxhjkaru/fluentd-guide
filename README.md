@@ -34,13 +34,14 @@ Hướng dẫn về Fluentd trong Ruby
   3.1 Source
   
     Source sẽ là nơi xác định xem log data sẽ được lấy từ đâu. Trong Fluentd thì source sẽ bao gồm http và          forward. http sẽ lấy log từ các message là http, trong khi đó forward sẽ lấy log từ các gói tin tcp. Và dĩ nhiên   là trong config có thẻ thiết lập để lấy cả 2 loại cùng lúc. Ví dụ cho thiết lập từ gói tin tcp và http như sau
+    
   ```
   <source>
     type forward
     port 24224
   </source>
   
-  và cho http
+  #and for http
   
   <source>
     type http
@@ -52,7 +53,7 @@ Hướng dẫn về Fluentd trong Ruby
   
   3.2 Match
   
-    Đây là 1 phần rất quan trọng trong FLuentd khi sẽ quyết định xem log data mà nhận được sẽ xử lý như thế nào.     Lưu trên S3, lưu trong Mongodb hay đơn giản là lưu vào 1 file nào đó. Ví dụ cụ thể cho match
+    Đây là 1 phần rất quan trọng trong FLuentd khi sẽ quyết định xem log data mà nhận được sẽ xử lý như thế nào.    Lưu trên S3, lưu trong Mongodb hay đơn giản là lưu vào 1 file nào đó. Ví dụ cụ thể cho match
   
   ```
   <match myapp.access>
@@ -63,11 +64,11 @@ Hướng dẫn về Fluentd trong Ruby
   
     Ở ví dụ trên thì tất cả các log data có tag là myapp-access sẽ đươc lưu vào file là                             /var/log/fluent/access.%Y-%m-%d. Ở phần match thì có 1 vài điểm cần lưu ý nhuư sau
     
-    - Match sẽ có phần đuôi mở rộng bao gồm
-      + a.* sẽ chỉ match những log data có tag là a.b ko nhận những tag là a.b.c
-      + a.** sẽ match nhũng log data có là a.b và cả a.b.c
-      + {a,b} sẽ math những log data có tag là a và b
-    - 1 log sẽ được quét từ đầu file Log đến cuối file log. Nếu match ở tag nào thì sẽ thực hiện ở tag đó và bỏ       qua tag tiếp theo. Do đó cần phải rất cẩn thận khi thiết lập file config. Vi dụ cho trường hợp sau
+  - Match sẽ có phần đuôi mở rộng bao gồm
+    + a.* sẽ chỉ match những log data có tag là a.b ko nhận những tag là a.b.c
+    + a.** sẽ match nhũng log data có là a.b và cả a.b.c
+    + {a,b} sẽ math những log data có tag là a và b
+  - 1 log sẽ được quét từ đầu file Log đến cuối file log. Nếu match ở tag nào thì sẽ thực hiện ở tag đó và bỏ       qua tag tiếp theo. Do đó cần phải rất cẩn thận khi thiết lập file config. Vi dụ cho trường hợp sau
     
     ```
     <match myapp.*>
