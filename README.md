@@ -61,7 +61,7 @@ Hướng dẫn về Fluentd trong Ruby
   </match>
   ```
   
-    Ở ví dụ trên thì tất cả các log data có tag là myapp-access sẽ đươc lưu vào file là                 /var/log/fluent/access.%Y-%m-%d. Ở phần match thì có 1 vài điểm cần lưu ý nhuư sau
+    Ở ví dụ trên thì tất cả các log data có tag là myapp-access sẽ đươc lưu vào file là                             /var/log/fluent/access.%Y-%m-%d. Ở phần match thì có 1 vài điểm cần lưu ý nhuư sau
     
     - Match sẽ có phần đuôi mở rộng bao gồm
       + a.* sẽ chỉ match những log data có tag là a.b ko nhận những tag là a.b.c
