@@ -4,10 +4,12 @@ Hướng dẫn về Fluentd trong Ruby
   Đối với web service thì một phần quan trọng là log data của web service. Trong bài viết này sẽ hướng dẫn về Fluentd, một công cụ mạnh để xử lý log trong web service.
   
   1. Fluentd
+  
     Fluentd là một ứng dụng hoàn toàn miễn phí và open-source giúp bạn có thể lấy được log ở web server và xử lý     log data đó. Bao gồm như lưu lên S3, lưu vào MongoDB hay chạy file ruby để xử lý dữ liệu đó. Trang chủ về          Fluentd:
   http://www.fluentd.org/
 
   2. Cài đặt Fluentd trong Ruby
+  
     Cài đặt Fluentd trên Ruby rất đơn giản chỉ bằng cài đặt gem
     ```
     gem install fluentd --no-ri --no-rdoc
