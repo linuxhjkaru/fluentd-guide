@@ -31,7 +31,7 @@ Hướng dẫn về Fluentd trong Ruby
   
     Trong 1 file config thường sẽ có 4 thành phần là: source, match, include, system. Trong đó source và match là   2 thành phần bắt buộc phải có. inlude và system có thể có có thể không. Dưới đây sẽ hướng dẫn cụ thể về source    và match trong fluentd.
 
-  3.1 Source
+    3.1 Source
   
     Source sẽ là nơi xác định xem log data sẽ được lấy từ đâu. Trong Fluentd thì source sẽ bao gồm http và          forward. http sẽ lấy log từ các message là http, trong khi đó forward sẽ lấy log từ các gói tin tcp. Và dĩ nhiên   là trong config có thẻ thiết lập để lấy cả 2 loại cùng lúc. Ví dụ cho thiết lập từ gói tin tcp và http như sau
     
@@ -51,7 +51,7 @@ Hướng dẫn về Fluentd trong Ruby
   
   Phần thiết lập cho source đơn giản chỉ có như vậy.
   
-  3.2 Match
+    3.2 Match
   
     Đây là 1 phần rất quan trọng trong FLuentd khi sẽ quyết định xem log data mà nhận được sẽ xử lý như thế nào.    Lưu trên S3, lưu trong Mongodb hay đơn giản là lưu vào 1 file nào đó. Ví dụ cụ thể cho match
   
@@ -92,7 +92,7 @@ Hướng dẫn về Fluentd trong Ruby
     
     
     
-  3.3 Include và System
+    3.3 Include và System
   
     Include chủ yếu được sử dụng cho trường hợp muốn include các file config khác. Còn System được sử dụng để       thiết lập cho các config hệ thống. Phần này các bạn có thể xem trên doc của Fluentd.
     
